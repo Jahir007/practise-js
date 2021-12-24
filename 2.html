@@ -4,15 +4,38 @@
     <body>
     
     <h2>My First Web Page</h2>
-    <p>My first paragraph.</p>
-    
+    <!--
+    <p id>LET cannot redeclared.</p>
+    -->
+    <p>Declaring a constant array does NOT make the elements unchangeble:</p>
+    <p id="d"></p>
     <button type="button" onclick="window.print()">PRESS ME TO PRINT </button>
+
+
     
         <script>
-            var x,y;
-            x = 1;
-            y = 9;
-            window.alert(x + y);
+       /* try {
+          
+            const pi = 3.14159266;
+            pi = 3.14
+
+        }
+        catch(err) {
+          document.getElementById("d").innerHTML = err;
+        }*/
+    
+            //document.getElementById("d").innerHTML=$;
+
+          //window.alert(x + y);
+
+
+          const cars = {type: "fait",model: "500",
+          color: "white"
+        };
+        
+        cars.color = "black";
+        cars.owner = "jahir"
+        document.getElementById("d").innerHTML = "Cars owner"+" " + cars.owner;
 
         </script>
 
