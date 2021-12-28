@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>  
+<p>Slice method</p>
+<p id = "d"></p>
+<p>substring method</p>
+<p id = "e"></p>
+<p>.................</p>
+<button type="button" onclick="replaceString()">Replace</button>
+<p id = "f">Repacing the string on this word and this word.</p>
+<p>.................</p>
+<p id = "g"></p>
+<p id = "h"></p>
+<p>locate the position of the index</p>
+<p id = "i"></p>    
+
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("d").innerHTML = fruits.slice(1, 3);
+    let str = "Apple, Banana, Kiwi";
+    document.getElementById("e").innerHTML = str.substring(5, 3);
+
+    function replaceString(){
+        let text = document.getElementById("f").innerHTML;
+        document.getElementById("f").innerHTML = text.replace(/Word/i, "replaced");
+
+    }
+
+    let t1 = "a,b,c,d,e";
+    const myarry = t1.split(",");
+    document.getElementById("g").innerHTML = myarry[1];
+
+    let t2 = "Hello,World,Welcome";
+
+    const myarry2 = t2.split("");
+    t2="";
+
+    for(let i = 0; i < myarry2.length; i++){
+        t2 += myarry2[i] + "<br>";
+    }
+    document.getElementById("h").innerHTML = t2;
+
+
+    let s1 = "please locate the position of the index";
+    //document.getElementById("i").innerHTML = s1.indexOf("the");
+    //document.getElementById("i").innerHTML = s1.lastIndexOf("the");
+    //document.getElementById("i").innerHTML = s1.lastIndexOf("jahir");
+    //document.getElementById("i").innerHTML = s1.indexOf("the",15);
+    //document.getElementById("i").innerHTML = s1.lastIndexOf("the",30);
+    document.getElementById("i").innerHTML = s1.search("the");
+
+
+
+</script>
+
+</body>
+
+</html>
