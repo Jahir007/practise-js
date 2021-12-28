@@ -19,7 +19,11 @@
 <p id = "g"></p>
 <p id = "h"></p>
 <p>locate the position of the index</p>
-<p id = "i"></p>    
+<p id = "i"></p>
+<P>Matching the string</P>
+<p id = "j"></p>
+<p>using include</p>    
+<p id = "k"></p>
 
 
 <script>
@@ -56,6 +60,12 @@
     //document.getElementById("i").innerHTML = s1.indexOf("the",15);
     //document.getElementById("i").innerHTML = s1.lastIndexOf("the",30);
     document.getElementById("i").innerHTML = s1.search("the");
+
+    let m = "There is heavy raining in the world";
+    document.getElementById("j").innerHTML = m.match(/in/gi);
+
+    let st = "hello world, welcome to the universe";
+    document.getElementById("k").innerHTML = st.startsWith("universe");
 
 
 
