@@ -9,7 +9,19 @@
     -->
     <p>Declaring a constant array does NOT make the elements unchangeble:</p>
     <p id="d"></p>
+    <p id ="d1"></p>
+    <p id ="d2"></p>
+    <p id ="d3"></p>
+    <p id ="d4"></p>
+    <p id ="d5"></p>
+    <p id ="d6"></p>
+    <p id ="d7">display time using function</p>
+    <p id ="d8"></p>
+
+
+
     <button type="button" onclick="window.print()">PRESS ME TO PRINT </button>
+    <br>
 
 
     
@@ -37,10 +49,79 @@
         cars.owner = "jahir"
         document.getElementById("d").innerHTML = "Cars owner"+" " + cars.owner;
 
+        const car = ["honda","toyota","bmw"];
+        document.getElementById("d1").innerHTML = car[0];
+
+        let a = 10;
+        let b = 20;
+        let c = 10;
+
+        document.getElementById("d").innerHTML = (a == b) + "<br> " + (a == c);
+
+
+        const person = {
+            name: "jahir",
+            lname: "khan",
+            age: "23"
+
+          };
+          //let x = Object.entries(person);
+            document.getElementById("d2").innerHTML = Object.values(person);
+           // console.log(person);
+
+
+        var x = myFunction(10,20);   
+
+        function myFunction(p1,p2) {
+            return p1 * p2;
+        }
+         
+        //document.getElementById("d3").innerHTML = myFunction(10,20);
+        document.getElementById("d3").innerHTML = x;
+
+      
+      function temprature(f) {
+        return 5/9 * (f-32)
+      };
+
+      y = temprature(86);
+      document.getElementById("d4").innerHTML ="Temprature in celcius is" + " " + y;
+
+
+      const p = {
+        name: "himesh",
+        lname: "patel",
+        age: "21",
+        fullname: function() {
+          return this.name + " " + this.lname;
+        }
+      };
+
+      document.getElementById("d5").innerHTML = p.fullname();
+
+
+      function displaytime() {
+        let d = new Date();
+        let t = d.toLocaleTimeString();
+        document.getElementById("d7").innerHTML = t;
+      }
+
+      let a1 = "jahir";
+      let a2 = new String("John");
+      document.getElementById("d8").innerHTML = (a1==a2);
+
         </script>
 
+    <br>
+    <button onclick="document.getElementById('d6').innerHTML = Date()">Click me to show date and time</button><br>
+    <br>
+    <button type="button" onclick="this.innerHTML = Date()">Click me to show date and time</button>
+    <br>
+    <br>
+    <button type="button" onclick="displaytime()">Click me to show time</button>
+    <br>  
+    <br>
+
+
     </body>
-   
-
-
 </html>
