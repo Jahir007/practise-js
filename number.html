@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            color: rgb(0, 0, 0);
+        }
+
+        #p1 {
+            color: blue;
+        }
+
+    </style>    
+</head>
+
+<body>
+<p id = "p1">Floating not always accurate</p>
+<p id="demo"></p>
+
+<p id = "p1">Its useful in multiplicatiion and division</p>
+<p id="demo1"></p>
+
+<p id = "p1">string convert to number while dividing.</p>
+<p id = "demo2"></p>
+
+<p id = "p1">When number divide by non-numeric values</p>
+<p id = "demo3"></p>
+
+<p id = "p1">using isNan to find out if the value is number or not.</p>
+<p id = "demo4"></p>
+<p id = "demo5"></p>
+
+<p id = "p1">Find value of to infinity</p>
+<p id = "demo6"></p>
+
+<p id = "p1">convert to diferent format of number</p>
+<p id = "demo7"></p>
+<p id = "demo8"></p>
+
+    <script>
+        let x = 0.2 +0.1;
+        document.getElementById("demo").innerHTML = "Floating point :" +" " + x;
+
+        let y = (0.2*10 + 0.1*10)/10;
+        document.getElementById("demo1").innerHTML = "Using mult/div :" +" " + y;
+
+
+        let d1 = "242";
+        let d2 = "11";
+        let d3 = d1/d2;
+        let d4 = d1*d2;
+        let d5 = d1-d2;
+
+       // document.getElementById("demo2").innerHTML = "Using string to number:" +" " + d3;
+        //document.getElementById("demo2").innerHTML = "Using string to number:" +" " + d4;
+        document.getElementById("demo2").innerHTML = "Using string to number:" +" " + d5;
+
+        document.getElementById("demo3").innerHTML = 100/'apple';
+        
+        let n = 125/"apple";
+        document.getElementById("demo4").innerHTML = isNaN(n);
+
+        let n1 = NaN;
+        let n2 = 5;
+        let n3 = "4";
+
+       // document.getElementById("demo5").innerHTML = n1 + n2;
+        //document.getElementById("demo5").innerHTML = n1 + n3;
+        document.getElementById("demo5").innerHTML = typeof(n1);
+
+        let num = 2;
+        let inf_n = "";
+
+        while(num != Infinity){
+            num = num*num;
+            inf_n = inf_n + num + "<br>";
+        }
+
+        document.getElementById("demo6").innerHTML = inf_n;
+
+        let num1 = 32;
+
+        document.getElementById("demo7").innerHTML = 
+        "all diff convert :" +" " +"<br>" + " decimal : " + num1.toString(10) + "<br>" + 
+        " Hexadecimal : " + num1.toString(16) + "<br>" +
+        " Octal : " + num1.toString(8) + "<br>" +
+        " Binary : " + num1.toString(2) + "<br>";
+
+        let i = 5;
+        let j= new Number(25);
+        let k = new Number(25);
+        
+        //document.getElementById("demo8").innerHTML = typeof x + "<br>" + typeof j;
+       // document.getElementById("demo8").innerHTML = (i==j);
+       document.getElementById("demo8").innerHTML = (j===k);
+
+    </script>
+</body>
+
+
+
+
+
+
+
+</html>
