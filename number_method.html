@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Number Method</title>
+
+<style>
+    p {
+        color: rgb(31, 31, 100);
+    }
+
+    #a {
+        color: rgb(92, 1, 1);
+    }
+
+</style>
+</head>
+<body>
+
+    <p id="a">Using toSting method to convert number to string</p>
+    <p id="demo"></p>
+
+    <p id="a">For exponential</p>
+    <p id="demo1"></p>
+
+    <p id="a">For fixed value</p>
+    <p id="demo2"></p>
+
+    <p id="a">Converting date to number</p>
+    <p id="demo3"></p>
+
+    <p id = "a">Finding the highest possible maximum value</p>
+    <p id = "demo4"></p>
+
+    <p id = "a">Using number property on variable rteurns undefined</p>
+    <p id = "demo5"></p>
+
+
+    <script>
+
+        var x = 10;
+        //document.getElementById("demo").innerHTML = "Using toString method:" + " " + x.toString();
+        document.getElementById("demo").innerHTML = (20 - 10).toString();
+
+        document.getElementById("demo1").innerHTML = x.toExponential();
+
+        
+        var x = 2.366;
+        var y = "10 years"
+        //document.getElementById("demo2").innerHTML = x.toFixed(2);
+        //document.getElementById("demo2").innerHTML = x.toPrecision(8);
+        //document.getElementById("demo2").innerHTML = x.valueOf();
+        //document.getElementById("demo2").innerHTML = parseInt(x);
+        document.getElementById("demo2").innerHTML = parseFloat(y);
+
+        var x = new Date("2021-12-29");
+        document.getElementById("demo3").innerHTML = Number(x);
+
+        //document.getElementById("demo4").innerHTML = Number.MAX_VALUE;
+
+        var x = Number.MIN_VALUE;
+        document.getElementById("demo4").innerHTML = x;
+
+        var x = 6;
+        document.getElementById("demo5").innerHTML = x.MAX_VALUE;
+
+
+    </script>
+
+
+
+</body>
+</html>
