@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<body>
+<p>Litterls in javascript</p>
+<p id ="demo"></p>
+
+<p>Using number in litterls</p> 
+<p id ="demo1"></p>
+<p id ="demo2"></p>
+<p id ="demo3"></p>
+
+
+    <script>
+        let fname = 'Jahir';
+        let lname = 'Khan';
+        let age = '20';
+
+        let greeting = `good morning ${fname} ${lname}!`;
+        document.getElementById("demo").innerHTML = greeting;
+
+        let price = '13.99';
+        let tax = '3.5';
+        let total = `Total price is ${price * tax}`;
+        document.getElementById("demo1").innerHTML = total;
+
+        let header = 'Templete literals';
+        let tags = ["template", "literals", "javascript"];
+
+        let html = `<h3>${header}</h3>`;
+
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+ }
+
+        html += `<ul>`;
+        document.getElementById("demo3").innerHTML = html;
+
+    </script>
+
+
+</body>
+
+</html>
