@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arrays</title>
+<style>
+p {
+    color: rgb(44, 44, 255);
+}
+
+#a{
+    color: rgb(226, 28, 28);
+}
+</style>
+
+<body>
+
+    <h2>Arrays</h2>
+    <p id="a">Arrays are a collection of values of the same type</p>
+    <p id="demo"></p>
+
+    <p id="a">Acces the array</p>
+    <p id="demo1"></p>
+
+    <p id = "a">access the array value from reverse</p>
+    <p id = "demo2"></p>  
+    
+    <p id = "a">Looping the array elements</p>
+    <p id = "demo3"></p>
+
+    <p id = "a">push method to append value in array</p>
+    <button type="button" onclick="myfruit()">append</button>
+    <p id = "demo4"></p>
+
+    <p id = "a">Adding elements with high index will create holes in the array</p>
+    <p id = "demo5"></p>
+
+    <p id = "a">Associated the array</p>
+    <p id = "demo6"></p>
+
+    <p id = "a">If you use a named index when accessing an array,
+        JavaScript will redefine the array to a standard object,
+        and some array methods and properties will produce undefined or incorrect results.</p>
+    <p id = "demo7"></p>
+
+    <p id = "a">Avoid using new Array(). Use [] instead.</p>
+    <p id = "demo8"></p>
+
+
+    <script>
+
+       // const cars = ["Saab", "Volvo", "BMW"];
+      ` const cars = [];
+            cars[0] = "Saab";
+            cars[1] = "Volvo";
+            cars[2] = "BMW";
+        `
+        const cars =  new Array("Saab", "Volvo", "BMW");
+
+        cars[0] = "Audi";
+
+        //document.getElementById("demo").innerHTML = cars;
+        document.getElementById("demo").innerHTML = cars.sort();
+
+        const person = {
+            firstName: "Jahir",
+            lastName: "Khan",
+            age: 21,
+            eyeColor: "black"
+        };
+
+        document.getElementById("demo1").innerHTML = person.firstName;
+
+        document.getElementById("demo2").innerHTML = cars[cars.length - 1];
+
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit_length = fruits.length;
+
+        list_fruits = "";
+
+        for (let i= 0; i < fruit_length;i++){
+            list_fruits += "<li>" + fruits[i] + "</li>";
+        }
+
+        list_fruits += "<ul>";
+        document.getElementById("demo3").innerHTML = list_fruits;
+
+        document.getElementById("demo4").innerHTML =fruits;
+        
+        function myfruit(){
+            //fruits.push("Kiwi");
+            fruits[fruits.length] = "Kiwi";
+            document.getElementById("demo4").innerHTML = fruits;
+        }
+
+        
+        const vegetables = ["Cabbage", "Tomato", "Onion"];
+        vegetables[6] = "Potato";
+
+        let vlen = vegetables.length;
+        let veg_list = "";
+
+        for (let i = 0; i < vlen; i++){
+            veg_list += "<li>" + vegetables[i] + "</li>";
+        }
+
+        veg_list += "<ul>";
+
+        document.getElementById("demo5").innerHTML = veg_list;
+
+    
+
+        const tree = [];
+        tree[0] = "Redwood";
+        tree[1] = "Oak";
+        tree[2] = "Maple";
+
+        document.getElementById("demo6").innerHTML = tree[0] + " " + tree.length;
+
+
+        const hotels = [];
+        hotels["name"] = "Hilton";
+        hotels["location"] = "New York";
+        hotels["rating"] = 4;
+
+        document.getElementById("demo7").innerHTML = hotels[0] + " " + hotels.length;
+        
+        //const points = new Array(10, 20, 30);
+        const points = [10, 20, 30];
+
+        document.getElementById("demo8").innerHTML = points[0];
+
+
+
+    </script>
+     
+</body>     
+
+
+
+</html>
