@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array itteration</title>
+</head>
+<style>
+body {
+    background-color: #f7f4f1;
+}
+
+p {
+    color: rgb(24, 159, 212);
+    font-family:Arial, Helvetica, sans-serif
+}
+#a{
+    color: rgb(226, 28, 28);
+    font: 1em sans-serif;
+    font-size:larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#h {
+    color: rgb(104, 62, 62);
+}
+
+
+</style>
+
+<body>
+<h1>Array itteration</h1>
+
+<h2 id = "h">JavaScript Array.forEach()</h2>
+<p id = "a">Calls a function once for each array element.</p>
+<p id = "demo"></p>
+
+<h2 id = "h">JavaScript Array.map()</h2>
+<p id = "a">Creates a new array with the results of calling a function for every array element.</p>
+<p id = "demo1"></p>
+<p id = "demo2"></p>
+
+
+<h2 id = "h">JavaScript Array.filter()</h2>
+<p id = "a">Creates a new array with every array element that passes a test.</p>
+<p id = "demo3"></p>
+
+
+<h2 id = "h">JavaScript Array.reduce()</h2>
+<p id = "a">Reduces the array to a single value.</p>
+<p id = "demo4"></p>
+
+<h2 id = "h">JavaScript Array.some()</h2>
+<p id = "a">Returns true if at least one element in the array passes the test.</p>
+<p id = "demo5"></p>
+
+<h2 id = "h">JavaScript Array.every()</h2>
+<p id = "a">Returns true if all elements in the array pass the test.</p>
+<p id = "demo6"></p>
+
+<p id = "a">JavaScript Array.indexOf()</p>
+<p id = "demo7"></p>
+
+<h2 id = "h">find array index</h2>
+<p id = "a">Returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>
+<p id = "demo8"></p>
+
+
+
+
+    <script>
+
+        const number = [1, 2, 3, 4];
+
+        let txt = "";
+        number.forEach(for_function);
+        document.getElementById("demo").innerHTML = txt;
+        
+        function for_function(value) {
+            txt += value + "<br>";
+        }
+
+
+        const number2 = [2, 4, 6, 8];
+        document.getElementById("demo1").innerHTML = number2;
+        const number3 = number2.map(F_fun);
+
+        document.getElementById("demo2").innerHTML = number3;
+
+        function F_fun(value) { 
+            return value * 5;
+        }
+
+
+        const value = [1,2,7,6,3,8,9,4,5];
+        const v_4 = value.filter(filter_fun);
+        document.getElementById("demo3").innerHTML = v_4;
+        function filter_fun(value) {
+            return value > 4;
+        }
+
+
+        const value2 = [1,2,7,6,3,8,9,4,5];
+        //const sum = value2.reduce(reduce_fun);
+        const sum = value2.reduce(reduce_fun, 100);
+
+        document.getElementById("demo4").innerHTML = "The sum of the array is: " + sum;
+        function reduce_fun(total, value) {
+            return total + value;
+        }
+
+
+        const value3 = [1,2,7,6,3,8,9,4,5];
+        const some_num = value3.some(reduce_fun)
+        document.getElementById("demo5").innerHTML = some_num;
+        function reduce_fun(total, value) {
+            return total + value;
+        }
+
+        const value4 = [1,2,7,6,3,8,9,4,5];
+        const all_num = value4.every(reduce_fun)
+        document.getElementById("demo6").innerHTML = all_num;
+        function reduce_fun(total, value) {
+            return total + value;
+        }
+
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        //const index = fruits.indexOf("Apple")+1;
+        //document.getElementById("demo7").innerHTML = "The index of the element is: " + index;
+
+        const index = fruits.lastIndexOf("Apple")+1;
+        document.getElementById("demo7").innerHTML = "The index of the element is: " + index;
+
+
+        const n1 = [1,1,5,5,6,23,50];
+        let frt= n1.find(fnd_fun);
+        document.getElementById("demo8").innerHTML = frt;
+
+        function fnd_fun(value) {
+            return value > 5;
+        }
+
+    </script>
+
+
+</body>
+</html>
