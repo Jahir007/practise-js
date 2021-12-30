@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Array Method</title>
+<style>
+p {
+    color: rgb(44, 44, 255);
+}
+
+#a {
+    color: rgb(226, 28, 28);
+}
+</style>
+
+
+<body>
+<h2>Arrays</h2>
+
+    <p id="a">Converting an array to sting using toSting() method.</p>
+    <p id="demo"></p>
+
+    <h2>join()</h2> 
+    <p id = "a">It this example we have used " * " as a separator between the elements:</p>
+    <p id = "demo1"></p>
+
+
+    <h2>pop()</h2>
+    <p id = "a">The pop() method removes the last element from an array.</p>
+
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <h2>push()</h2>
+    <p id = "a">The push() method adds one or more elements to the end of an array and returns the new length of the array.</p>
+    <p id = "demo4"></p>
+    <p id = "demo5"></p>
+
+    <h2>shift()</h2>
+    <p id = "a">The shift() method removes the first element from an array and returns that removed element.</p>
+    <p id = "demo6"></p>
+    <p id = "demo7"></p>
+
+    <h2>unshift()</h2>
+    <p id = "a">The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.</p>
+    <p id = "demo8"></p>
+    <p id = "demo9"></p>
+
+
+    <p id = "a">Array elements are accessed using their index number:</p>
+    <p id = "demo10"></p>
+    <p id = "demo11"></p>
+
+
+    <p id = "a">length provide easy way to append elements in array:</p>
+    <p id = "demo12"></p>
+    <p id = "demo13"></p>
+
+
+    <p id = "a">Delete elements will leave a holes in the array</p>
+    <p id = "demo14"></p>
+    <p id = "demo15"></p>
+
+    <h2>concat()</h2>
+    <p id = "a">The concat() method is used to merge two or more arrays:</p>
+    <p id = "demo16"></p>
+
+    <h2>splice()</h2>
+    <p id = "a">The splice() method can be used to add new items to an array, to remove items, and to replace existing items:</p>
+    <p id = "demo17"></p>
+    <p id = "demo18"></p>
+
+    <h2>splice()</h2>
+    <p id = "a">The splice() method can be used to add new items to an array, to remove items, and to replace existing items:</p>
+    <p id = "demo19"></p>
+    <p id = "demo20"></p>
+    <p id = "demo21"></p>
+
+    <h2>slice()</h2>
+    <p id = "a">The slice() method can be used to extract a part of the array and return it as a new array:</p>
+    <p id = "demo22"></p>
+
+
+
+
+    <script>
+
+        const items = ["item1", "item2", "item3"];
+        document.getElementById("demo").innerHTML = items.toString();
+
+        const electronics = ["laptop", "mobile", "tv"];
+        document.getElementById("demo1").innerHTML = electronics.join(" * ");
+
+        const color = ["red", "green", "blue", "yellow", "black"];
+        document.getElementById("demo2").innerHTML = color;
+        color.pop();
+        document.getElementById("demo3").innerHTML = color;
+
+        const fruits = ["apple", "banana", "orange"];
+        document.getElementById("demo4").innerHTML = fruits.push("apple");
+        //fruits.push("mango");
+        document.getElementById("demo5").innerHTML = fruits;
+
+        const cars = ["Saab", "Volvo", "BMW", "Toyota", "Honda"];
+        document.getElementById("demo6").innerHTML = cars;
+        cars.shift();
+        document.getElementById("demo7").innerHTML = cars;
+
+
+        const flowers = ["rose", "lily", "jasmine"];
+        document.getElementById("demo8").innerHTML = flowers.unshift("lotus");
+        //flowers.unshift("sunflower");
+        document.getElementById("demo9").innerHTML = flowers;
+
+
+
+        const fruits1 = ["apple", "banana", "orange"];
+        document.getElementById("demo10").innerHTML = fruits1;
+        fruits1[1] = "mango";
+        document.getElementById("demo11").innerHTML = fruits1;
+
+
+        const cars1 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo12").innerHTML = cars1;
+        cars1[cars1.length] = "Toyota";
+        document.getElementById("demo13").innerHTML = cars1;
+
+
+        const flowers1 = ["rose", "lily", "jasmine"];
+        document.getElementById("demo14").innerHTML = flowers1[0];
+        delete flowers1[0];
+        document.getElementById("demo15").innerHTML = flowers1[0];
+
+
+        const dish = ["pizza", "burger", "chicken"];
+        const ingredients = ["tomato", "cheese", "onion"];
+        const price = [200, 100, 50];
+
+        //const Full_dish = dish.concat(ingredients);
+        //document.getElementById("demo16").innerHTML = Full_dish;
+
+        const Full_dish = price.concat(ingredients, dish);
+        document.getElementById("demo16").innerHTML = Full_dish;
+
+
+        const country = ["India", "USA", "UK"];
+        document.getElementById("demo17").innerHTML = country;
+
+        country.splice(2, 0, "China", "Japan");
+        document.getElementById("demo18").innerHTML = country;
+
+
+        const cities = ["New York", "London", "Paris"];
+        document.getElementById("demo19").innerHTML = "Original array:<br> " + cities;
+        let del = cities.splice(2, 2, "Berlin", "Munich");
+        document.getElementById("demo20").innerHTML = "New array:<br> " + cities;
+        document.getElementById("demo21").innerHTML = "Deleted elements:<br> " + del;
+
+        const star = ["Sun", "Moon", "Mercury", "Venus", "Mars"];
+        //const slice_star = star.slice(1);
+        const slice_star = star.slice(1, 3);
+
+        document.getElementById("demo22").innerHTML = star + "<br>"+"<br>" +"Slice array:<br>" + slice_star;
+
+    </script>
+
+
+</body>
+
+
+</html>
